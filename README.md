@@ -2,7 +2,7 @@
 
 This repository contains the code for ChorusTIC. It includes the model, data loading, and inference modules required to run UCR/UEA evaluation.
 
-Pretrained checkpoints are available on Hugging Face: [JTF2000/ChorusTIC](https://huggingface.co/JTF2000/ChorusTIC).
+Pretrained checkpoints are available on Hugging Face: [DMIRLab/ChorusTIC](https://huggingface.co/DMIRLAB/ChorusTIC).
 
 ## Module Naming
 
