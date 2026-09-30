@@ -27,7 +27,7 @@
   <b>78.56 Overall Average Accuracy across all 198 time series classification datasets</b>
 </p>
 
-**ChorusTIC** is a classification-native foundation model for **training-free univariate and multivariate time series classification**. It performs prediction through in-context learning using labeled context examples, without fitting a target-specific classifier or updating model parameters.
+**ChorusTIC** is a classification-native foundation model for **univariate and multivariate time series classification**. It performs prediction through in-context learning using labeled context examples, without fitting a target-specific classifier or updating model parameters.
 
 📄 **Paper:** [ChorusTIC: Training-Free Multivariate Time Series Classification via Chorus In-Context Learning](https://arxiv.org/abs/2608.24033)  
 🤗 **Pretrained Checkpoint:** [DMIRLAB/ChorusTIC](https://huggingface.co/DMIRLAB/ChorusTIC)  
