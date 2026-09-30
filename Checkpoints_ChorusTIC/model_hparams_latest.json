@@ -1,0 +1,64 @@
+{
+  "model_config": {
+    "model": "ChorusTIC",
+    "signal_level_chorus": {
+      "arch": "da",
+      "seq_len": 512,
+      "hidden_dim": 512,
+      "num_patches": 32,
+      "num_channels": 1,
+      "use_dual_axis": true,
+      "num_dual_axis_layers": 3,
+      "temporal_heads": 8,
+      "channel_heads": 4,
+      "temporal_mlp_dim": 512,
+      "channel_mlp_dim": 512,
+      "dual_axis_dropout": 0.1,
+      "use_channel_mask": true,
+      "use_channel_axis_attention": true,
+      "channel_pool_type": "gated_mean",
+      "channel_set_aggregator": {
+        "type": "random_subchannel_slot_concat",
+        "dropout": 0.1,
+        "random_subchannel_slot_concat": {
+          "input_dim": 512,
+          "output_dim": 512,
+          "num_groups": 4,
+          "group_size": 4,
+          "slot_dim": 32,
+          "slot_projector_type": "linear",
+          "sampling": "coverage",
+          "train_resample": true,
+          "use_group_embedding": true,
+          "use_slot_embedding": true,
+          "freeze_mantis": true,
+          "no_grad_mantis": true,
+          "mantis_batch_size": 36,
+          "group_chunk_size": 1,
+          "output_norm": true
+        }
+      }
+    },
+    "adapter": {
+      "icl_dim": 512
+    },
+    "task_level_chorus": {
+      "max_classes": 10,
+      "embed_dim": 128,
+      "col_num_blocks": 3,
+      "col_nhead": 4,
+      "col_num_inds": 128,
+      "row_num_blocks": 3,
+      "row_nhead": 8,
+      "row_num_cls": 4,
+      "row_rope_base": 100000,
+      "icl_num_blocks": 12,
+      "icl_nhead": 4,
+      "ff_factor": 2,
+      "dropout": 0,
+      "activation": "gelu",
+      "norm_first": true,
+      "col_embedding_mode": "distribution_aware"
+    }
+  }
+}
