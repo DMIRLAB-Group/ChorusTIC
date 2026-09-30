@@ -1,4 +1,4 @@
-# ChorusTIC
+# ChorusTIC: Training-Free Multivariate Time Series Classification via Chorus In-Context Learning
 
 <p align="center">
   <a href="https://arxiv.org/abs/2608.24033">
